@@ -1,1 +1,14 @@
-@import "./base";
+@import "./base/base";
+@import "./base/typography";
+@import "./base/utilities";
+@import "./base/animations";
+
+@import "./layout/layout";
+@import "./layout/header";
+@import "./layout/navbar";
+@import "./layout/favebar";
+@import "./layout/hero";
+@import "./layout/new-artists";
+@import "./layout/popular";
+@import "./layout/recommended";
+@import "./layout/footer";

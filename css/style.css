@@ -12,6 +12,190 @@ html {
 body {
   font-family: "Inter", sans-serif;
   color: #12141d;
-  font-size: 1.5rem;
-  line-height: 1.47;
+  font-size: 1.4rem;
+  line-height: 1.5;
   font-weight: 400; }
+
+.heading-1 {
+  font-size: 3.2rem;
+  line-height: 1.31;
+  padding-top: 0.2rem; }
+
+.container {
+  display: grid;
+  grid-template-rows: min-content minmax(calc(100vh - 10rem), min-content);
+  grid-template-columns: [navbar-start] 8rem [navbar-end main-start] 1fr [main-end favebar-start] 34.4rem [favebar-end]; }
+
+.header {
+  padding: 2.8rem 4.4rem 3.2rem; }
+  .header__content {
+    position: relative;
+    display: flex;
+    align-items: center; }
+    .header__content::after {
+      position: absolute;
+      content: "";
+      display: inline-block;
+      width: 40px;
+      height: 1px;
+      background-color: #3a3c45;
+      background-color: #d4dae1;
+      width: 100%;
+      bottom: -24px; }
+
+.searchbar {
+  margin-left: auto;
+  display: flex; }
+  .searchbar__input-box {
+    position: relative;
+    width: 24rem;
+    display: flex;
+    align-items: center; }
+    .searchbar__input-box:first-child {
+      margin-right: 2rem; }
+  .searchbar__input {
+    padding: 1.3rem 1.6rem;
+    border: 1px solid #d4dae1;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 500;
+    line-height: 1.47;
+    width: 100%; }
+    .searchbar__input::placeholder {
+      color: #8b929a; }
+    .searchbar__input:focus {
+      outline: none; }
+  .searchbar__button {
+    position: absolute;
+    right: 1.2rem;
+    color: #8b929a;
+    border: none;
+    background-color: #fff;
+    line-height: 1; }
+  .searchbar__icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    fill: currentColor;
+    cursor: pointer; }
+  .searchbar__checkbox {
+    display: none; }
+
+.nav {
+  background-color: #12141d;
+  grid-row: 1 / -1;
+  grid-column: 1 / 2;
+  padding: 3.2rem 2rem;
+  position: relative; }
+  .nav__box {
+    height: 100vh; }
+  .nav__list {
+    position: fixed;
+    top: 3.2rem;
+    left: 2rem;
+    list-style: none;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.4rem; }
+  .nav__item {
+    width: 4rem;
+    height: 4rem; }
+    .nav__item:first-child {
+      margin-bottom: 24px;
+      position: relative; }
+      .nav__item:first-child::after {
+        position: absolute;
+        content: "";
+        display: inline-block;
+        width: 40px;
+        height: 1px;
+        background-color: #3a3c45;
+        bottom: -24px; }
+    .nav__item:nth-child(7) {
+      margin-top: auto; }
+    .nav__item:nth-child(8) {
+      margin-bottom: 24px; }
+    .nav__item:last-child {
+      position: relative; }
+      .nav__item:last-child::after {
+        position: absolute;
+        content: "";
+        display: inline-block;
+        width: 40px;
+        height: 1px;
+        background-color: #3a3c45;
+        top: -24px; }
+  .nav__item--active .nav__link:link,
+  .nav__item--active .nav__link:visited {
+    background-color: #38f094;
+    border-color: #38f094; }
+  .nav__link:link, .nav__link:visited {
+    text-decoration: none;
+    display: inline-block;
+    color: #8b929a;
+    width: 100%;
+    height: 100%;
+    border: 1.5px solid #3a3c45;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 250ms ease-in-out; }
+  .nav__link:hover .nav::before {
+    transform: scale(1.5);
+    opacity: 0; }
+  .nav__link:hover {
+    background-color: #38f094;
+    border-color: #38f094; }
+  .nav__link:hover .nav__logo {
+    transform: scale(1.2); }
+  .nav__link:hover .nav__icon {
+    fill: #12141d; }
+  .nav__link:active {
+    background-color: #12af6d;
+    border-color: #12af6d; }
+  .nav__logo {
+    width: 4rem;
+    height: 4rem;
+    transition: all 250ms ease-in-out; }
+  .nav__icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    fill: currentColor;
+    transition: all 250ms ease-in-out; }
+  .nav__item--active .nav__link:link,
+  .nav__item--active .nav__link:visited {
+    background-color: #38f094;
+    border-color: #38f094; }
+  .nav__item--active .nav__icon {
+    fill: #12141d; }
+
+.favebar {
+  grid-row: 1 / -1;
+  grid-column: favebar-start / favebar-end;
+  background-color: bisque;
+  padding: 3.2rem 2rem; }
+  .favebar__content {
+    position: fixed; }
+
+.hero {
+  height: 30rem;
+  border: 3px solid tomato; }
+
+.new-artists {
+  height: 10rem;
+  border: 3px solid teal; }
+
+.popular {
+  height: 10rem;
+  border: 3px solid tomato; }
+
+.recommended {
+  height: 10rem;
+  border: 3px solid teal; }
+
+.footer {
+  height: 30rem;
+  border: 3px solid yellowgreen; }

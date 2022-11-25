@@ -15,6 +15,15 @@ $color-green: #12af6d;
 $color-red: #ff2200;
 $color-orange: #fb4f34;
 
+// TRANSITION
+$basic-transition: all 250ms ease-in-out;
+
+// BORDERS
+$border-radius-circle: 50%;
+$border-radius-6: 6px;
+$border-radius-4: 4px;
+
+*,
 *::before,
 *::after {
   padding: 0;
@@ -30,7 +39,7 @@ html {
 body {
   font-family: "Inter", sans-serif;
   color: $color-black;
-  font-size: 1.5rem;
-  line-height: 1.47;
+  font-size: 1.4rem;
+  line-height: 1.5;
   font-weight: 400;
 }

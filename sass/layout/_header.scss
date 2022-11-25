@@ -1,0 +1,80 @@
+.header {
+  padding: 2.8rem 4.4rem 3.2rem;
+
+  &__content {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    &::after {
+      @include nav-pseudo;
+      background-color: $color-grey-light-1;
+      width: 100%;
+      bottom: -24px;
+    }
+  }
+}
+
+.searchbar {
+  margin-left: auto;
+
+  display: flex;
+
+  &__input-box {
+    position: relative;
+    width: 24rem;
+
+    display: flex;
+    align-items: center;
+
+    &:first-child {
+      margin-right: 2rem;
+    }
+  }
+
+  &__input {
+    padding: 1.3rem 1.6rem;
+    border: 1px solid $color-grey-light-1;
+    border-radius: $border-radius-6;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 500;
+    line-height: 1.47;
+    width: 100%;
+
+    &::placeholder {
+      color: $color-grey-2;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    right: 1.2rem;
+
+    color: $color-grey-2;
+    border: none;
+    background-color: $color-white;
+    line-height: 1;
+
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+  }
+
+  &__icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    fill: currentColor;
+
+    cursor: pointer;
+  }
+
+  &__checkbox {
+    display: none;
+  }
+}
