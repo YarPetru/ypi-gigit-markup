@@ -1,0 +1,45 @@
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+
+  20% {
+    transform: scale(1.1);
+    box-shadow: 0 2rem 4rem rgba(black, 0.15);
+  }
+
+  25% {
+    transform: scale(0.95);
+    box-shadow: none;
+  }
+
+  30% {
+    transform: scale(1.15);
+    box-shadow: 0 1rem 2.4rem rgba(black, 0.1);
+  }
+
+  50% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+
+  70% {
+    transform: scale(1.15);
+    box-shadow: 0 1rem 2.4rem rgba(black, 0.1);
+  }
+
+  75% {
+    transform: scale(0.95);
+    box-shadow: none;
+  }
+
+  80% {
+    transform: scale(1.2);
+    box-shadow: 0 2rem 4rem rgba(black, 0.15);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

@@ -1,4 +1,25 @@
 .popular {
-  height: 10rem;
-  border: 3px solid tomato;
+  padding: 2.8rem 4.4rem;
+
+  &__list {
+    list-style: none;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min-content, 29.6rem));
+    gap: 2rem;
+  }
+
+  &__item {
+    width: 29.6rem;
+  }
+
+  &__img {
+    width: 100%;
+    border-radius: $border-radius-4;
+  }
+
+  &__fave-icon {
+    width: 24px;
+    height: 24px;
+  }
 }

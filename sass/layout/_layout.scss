@@ -1,8 +1,15 @@
 .container {
   display: grid;
-  // grid-template-rows: minmax(min-content, 10rem) repeat(3, min-content);
+  // grid-template-rows: minmax(min-content, 10rem) repeat(3, max-content);
 
-  grid-template-rows: min-content minmax(calc(100vh - 10rem), min-content);
+  // grid-template-rows: repeat(3, max-content);
+
+  grid-template-rows:
+    [header-start] 9.8rem [header-end main-start] minmax(
+      calc(100vh - 10rem),
+      min-content
+    )
+    [main-end];
 
   // grid-template-rows: 10rem 1fr;
   grid-template-columns: [navbar-start] 8rem [navbar-end main-start] 1fr [main-end favebar-start] 34.4rem [favebar-end];
@@ -18,3 +25,9 @@
 // .fave-btn:checked ~ .container .favebar {
 //   width: 0;
 // }
+
+.main-content {
+  display: grid;
+
+  grid-template-rows: [hero-start] 26rem [hero-end];
+}
