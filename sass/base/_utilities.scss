@@ -1,3 +1,5 @@
+// MARGINS
+
 .margin-bottom--24 {
   margin-bottom: 2.4rem;
 }
@@ -18,6 +20,8 @@
   margin-bottom: 0.2rem;
 }
 
+// MIXINS
+
 @mixin nav-pseudo {
   position: absolute;
   content: "";
@@ -25,6 +29,13 @@
   width: 40px;
   height: 1px;
   background-color: $color-grey-dark;
+}
+
+@mixin basic-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  fill: currentColor;
+  transition: $basic-transition;
 }
 
 // @mixin img-rounded {

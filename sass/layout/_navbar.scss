@@ -136,10 +136,7 @@
   }
 
   &__icon {
-    width: 2.4rem;
-    height: 2.4rem;
-    fill: currentColor;
-    transition: $basic-transition;
+    @include basic-icon;
   }
 
   &__item--active &__link:link,

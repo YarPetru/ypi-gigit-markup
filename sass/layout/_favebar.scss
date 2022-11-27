@@ -30,6 +30,41 @@
     }
   }
 
+  // ---- LIST OF THE FAVES
+
+  &__list {
+    list-style: none;
+
+    display: grid;
+    // grid-template-columns: max-content max-content;
+    grid-template-rows: repeat(auto-fit);
+    gap: 2.4rem;
+  }
+
+  &__img {
+    width: 4rem;
+    border-radius: $border-radius-circle;
+  }
+
+  &__item {
+    grid-column: 1/2;
+    transition: all 1000ms;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item:hover .btn-remove {
+    opacity: 1;
+    visibility: visible;
+    animation: appearance-to-left 2000ms forwards;
+  }
+
+  &__item figure {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+  }
+
   &__link:link,
   &__link:visited {
     text-decoration: none;
@@ -41,30 +76,23 @@
   &__link:hover {
     color: $color-green;
   }
+}
 
-  // ---- LIST OF THE FAVES
+.btn-remove {
+  border: none;
+  color: $color-accent-red;
+  background-color: transparent;
+  cursor: pointer;
 
-  &__list {
-    list-style: none;
+  opacity: 0;
+  visibility: hidden;
 
-    display: grid;
-    grid-template-rows: repeat(auto-fit);
-    gap: 2.4rem;
+  &:hover {
+    color: $color-red;
   }
 
-  &__item figure {
-    display: flex;
-    align-items: center;
-    gap: 1.6rem;
-  }
-
-  &__item:hover &__img {
-    animation: pulsate 2000ms;
-  }
-
-  &__img {
-    width: 4rem;
-    border-radius: $border-radius-circle;
+  &__icon {
+    @include basic-icon;
   }
 }
 
