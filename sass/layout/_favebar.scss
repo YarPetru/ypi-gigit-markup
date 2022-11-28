@@ -6,6 +6,11 @@
   background-color: $color-grey-light-3;
   border-left: 1px solid $color-grey-light-1;
 
+  @media only screen and (max-width: $bp-medium) {
+    visibility: hidden;
+    // width: 0;
+  }
+
   // width: 0;
   // position: relative;
 
@@ -74,7 +79,11 @@
   }
 
   &__link:hover {
-    color: $color-green;
+    transform: translateY(-1px);
+  }
+
+  &__link:active {
+    transform: translateY(1px);
   }
 }
 
@@ -91,8 +100,13 @@
     color: $color-red;
   }
 
+  &:active &__icon {
+    transform: translateY(1px);
+  }
+
   &__icon {
     @include basic-icon;
+    transition: $basic-transition;
   }
 }
 

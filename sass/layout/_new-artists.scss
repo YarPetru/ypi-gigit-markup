@@ -7,6 +7,11 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min-content, 10.2rem));
     gap: 1.6rem;
+
+    @media only screen and (max-width: $bp-small) {
+      grid-template-columns: repeat(auto-fit, minmax(min-content, 12rem));
+      gap: 1.4rem;
+    }
   }
 
   &__item {
@@ -24,5 +29,9 @@
     border-radius: $border-radius-circle;
     margin-bottom: 1.2rem;
     transition: $basic-transition;
+
+    @media only screen and (max-width: $bp-small) {
+      width: 10rem;
+    }
   }
 }

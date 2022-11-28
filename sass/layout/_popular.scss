@@ -7,10 +7,26 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min-content, 29.6rem));
     gap: 2rem;
+
+    @media only screen and (max-width: $bp-large) {
+      grid-template-columns: repeat(auto-fit, minmax(min-content, 22rem));
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      grid-template-columns: repeat(auto-fit, minmax(min-content, 18rem));
+    }
   }
 
   &__item {
     width: 29.6rem;
+
+    @media only screen and (max-width: $bp-large) {
+      width: 22rem;
+    }
+
+    @media only screen and (max-width: $bp-large) {
+      width: 18rem;
+    }
   }
 
   &__img {

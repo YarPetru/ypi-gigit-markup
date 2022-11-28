@@ -5,12 +5,21 @@
     list-style: none;
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(13.8rem, min-content));
+    grid-template-columns: repeat(auto-fit, minmax(min-content, 13.8rem));
     gap: 2rem;
+
+    @media only screen and (max-width: $bp-small) {
+      grid-template-columns: repeat(auto-fit, minmax(min-content, 12rem));
+      gap: 1.4rem;
+    }
   }
 
   &__item {
     width: 13.8rem;
+
+    @media only screen and (max-width: $bp-small) {
+      width: 12rem;
+    }
   }
 
   &__img {
