@@ -113,15 +113,15 @@
                 placeholder="View Filters"
                 autocomplete="off"
               />
-              <input type="checkbox" class="searchbar__checkbox" id="filter" />
-              <label class="searchbar__button" for="">
+              <!-- <input type="checkbox" class="searchbar__checkbox" id="pop-up" /> -->
+              <a href="#pop-up" class="searchbar__button">
                 <svg class="searchbar__icon">
                   <use xlink:href="./img/sprite.svg#Filters"></use>
                 </svg>
 
                 <!-- NOTIFICATION -->
                 <span class="searchbar__notification">3</span>
-              </label>
+              </a>
 
               <!-- <label class="searchbar__label" for="filter">&nbsp;</label> -->
             </div>
@@ -429,6 +429,162 @@
       <!-- ADD BUTTON "TO THE BEGIN" -->
     </div>
 
+    <!-- MODAL -->
+    <div class="pop-up" id="pop-up">
+      <div class="pop-up__content">
+        <h2 class="heading-1 margin-bottom--36">Filters</h2>
+        <form action="#">
+          <div class="pop-up__filters">
+            <!-- Filter - 1 -->
+            <div class="pop-up__filter">
+              <label for="filter-toggle--size" class="pop-up__main-label">
+                <p
+                  class="pop-up__filter-heading pop-up__filter-heading--filtered"
+                >
+                  Act size
+                </p>
+                <div class="pop-up__filter-icons">
+                  <span class="pop-up__notification">1</span>
+                  <svg class="icon-edit">
+                    <use xlink:href="./img/sprite.svg#Pencil"></use>
+                  </svg>
+                  <svg class="icon-chevron--down">
+                    <use xlink:href="./img/sprite.svg#Chevron-Down"></use>
+                  </svg>
+                  <svg class="icon-chevron--up">
+                    <use xlink:href="./img/sprite.svg#Chevron-Up"></use>
+                  </svg>
+                </div>
+              </label>
+              <input
+                type="checkbox"
+                class="pop-up__main-checkbox"
+                id="filter-toggle--size"
+              />
+              <ul class="pop-up__filter-list pop-up__filter-list--size">
+                <li class="pop-up__filter-item">
+                  <input type="checkbox" id="alternative" />
+                  <label for="alternative">3:00pm – 6:00pm</label>
+                </li>
+                <li class="pop-up__filter-item">
+                  <input type="checkbox" id="grunge" checked />
+                  <label for="grunge">6:00pm – 9:00pm</label>
+                </li>
+                <li class="pop-up__filter-item">
+                  <input type="checkbox" id="hard-rock" />
+                  <label for="hard-rock">9:00pm – 12:00pm</label>
+                </li>
+              </ul>
+            </div>
+            <!-- Filter - 2 -->
+            <div class="pop-up__filter">
+              <label for="filter-toggle--genre" class="pop-up__main-label">
+                <p class="pop-up__filter-heading">Genre</p>
+                <div class="pop-up__filter-icons">
+                  <svg class="icon-edit">
+                    <use xlink:href="./img/sprite.svg#Pencil"></use>
+                  </svg>
+                  <svg class="icon-chevron--down">
+                    <use xlink:href="./img/sprite.svg#Chevron-Down"></use>
+                  </svg>
+                  <svg class="icon-chevron--up">
+                    <use xlink:href="./img/sprite.svg#Chevron-Up"></use>
+                  </svg>
+                </div>
+              </label>
+              <input
+                type="checkbox"
+                class="pop-up__main-checkbox"
+                id="filter-toggle--genre"
+              />
+              <ul class="pop-up__filter-list pop-up__filter-list--genre">
+                <li class="pop-up__filter-item">
+                  <input type="checkbox" id="alternative" />
+                  <label for="alternative">Alternative</label>
+                </li>
+                <li class="pop-up__filter-item">
+                  <input type="checkbox" id="grunge" />
+                  <label for="grunge">Grunge</label>
+                </li>
+                <li class="pop-up__filter-item">
+                  <input type="checkbox" id="hard-rock" />
+                  <label for="hard-rock">Hard Rock</label>
+                </li>
+                <li class="pop-up__filter-item">
+                  <input type="checkbox" id="nu-metal" />
+                  <label for="nu-metal">Nu metal</label>
+                </li>
+                <li class="pop-up__filter-item">
+                  <input type="checkbox" id="post-grunge" />
+                  <label for="post-grunge">Post Grunge</label>
+                </li>
+                <li class="pop-up__filter-item">
+                  <input type="checkbox" id="rock" />
+                  <label for="rock">Rock</label>
+                </li>
+              </ul>
+            </div>
+            <!-- Filter - 3 -->
+            <div class="pop-up__filter">
+              <label class="pop-up__main-label" for="filter-toggle--price">
+                <p
+                  class="pop-up__filter-heading pop-up__filter-heading--filtered"
+                >
+                  Average gig price
+                </p>
+                <div class="pop-up__filter-icons">
+                  <span class="pop-up__notification">2</span>
+                  <svg class="icon-edit">
+                    <use xlink:href="./img/sprite.svg#Pencil"></use>
+                  </svg>
+                  <svg class="icon-chevron--down">
+                    <use xlink:href="./img/sprite.svg#Chevron-Down"></use>
+                  </svg>
+                  <svg class="icon-chevron--up">
+                    <use xlink:href="./img/sprite.svg#Chevron-Up"></use>
+                  </svg>
+                </div>
+              </label>
+              <input
+                class="pop-up__main-checkbox"
+                type="checkbox"
+                id="filter-toggle--price"
+              />
+              <ul class="pop-up__filter-list pop-up__filter-list--price">
+                <li class="pop-up__filter-item">
+                  <input type="checkbox" id="grunge" checked />
+                  <label for="grunge">Less than $50 per hour</label>
+                </li>
+                <li class="pop-up__filter-item">
+                  <input type="checkbox" id="hard-rock" />
+                  <label for="hard-rock">$50-99 per hour</label>
+                </li>
+                <li class="pop-up__filter-item">
+                  <input type="checkbox" id="nu-metal" checked />
+                  <label for="nu-metal">$100-149 per hour</label>
+                </li>
+                <li class="pop-up__filter-item">
+                  <input type="checkbox" id="post-grunge" />
+                  <label for="post-grunge">Above $150 per hour</label>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="pop-up__buttons-box">
+            <a href="#" class="pop-up__btn pop-up__btn--accent">Show results</a>
+            <a href="#" class="pop-up__btn pop-up__btn--white">Clear all</a>
+          </div>
+        </form>
+
+        <!-- CLOSE BTN -->
+        <a class="btn-close" href="#">
+          <svg class="btn-close__icon">
+            <use xlink:href="./img/sprite.svg#Close"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
     <!-- <input type="checkbox" class="fave__checkbox" id="fave-btn" />
     <label for="fave-btn" class="fave__btn">
       <span class="navigation__icon">FAVE</span>

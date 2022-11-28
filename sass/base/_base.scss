@@ -17,9 +17,11 @@ $color-orange: #fb4f34;
 
 // TRANSITION
 $basic-transition: all 250ms ease-in-out;
+$popup-transition: all 800ms cubic-bezier(0.66, -0.55, 0.4, 1.38);
 
 // BORDERS
 $border-radius-circle: 50%;
+$border-radius-16: 16px;
 $border-radius-6: 6px;
 $border-radius-4: 4px;
 

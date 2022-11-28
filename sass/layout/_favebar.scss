@@ -88,10 +88,9 @@
 }
 
 .btn-remove {
-  border: none;
+  @include svg-button;
+
   color: $color-accent-red;
-  background-color: transparent;
-  cursor: pointer;
 
   opacity: 0;
   visibility: hidden;
