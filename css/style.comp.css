@@ -114,6 +114,8 @@ body {
 
 .container {
   display: grid;
+  max-width: 1440px;
+  margin: 0 auto;
   grid-template-rows: [header-start] min-content [header-end main-start] min-content [main-end];
   grid-template-columns: [navbar-start] 8rem [navbar-end main-start] 1fr [main-end favebar-start] 34.4rem [favebar-end]; }
   @media only screen and (max-width: 53.75em) {
@@ -240,11 +242,11 @@ body {
   padding: 3.2rem 2rem;
   position: relative; }
   .nav__box {
-    height: 100vh; }
-  .nav__list {
-    position: fixed;
+    position: absolute;
+    height: 100vh;
     top: 3.2rem;
-    left: 2rem;
+    left: 2rem; }
+  .nav__list {
     list-style: none;
     height: 95%;
     display: flex;
@@ -636,6 +638,7 @@ body {
         width: 100%;
         height: 100%;
         max-height: 100vh;
+        border-radius: 0px;
         position: fixed; } }
   .pop-up__main-checkbox {
     display: none; }
@@ -747,3 +750,32 @@ body {
       transform: translateY(-1px); }
     .btn-close__icon:active {
       transform: translateY(1px); }
+
+.checkbox-custom {
+  position: relative;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  border: 1px solid #d4dae1;
+  color: #fff;
+  transition: all 100ms; }
+  .checkbox-custom__icon-check {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    fill: currentColor; }
+
+.basic-checkbox {
+  display: none; }
+  .basic-checkbox__label {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    cursor: pointer; }
+  .basic-checkbox:checked ~ .basic-checkbox__label .checkbox-custom {
+    border-color: #ff715b;
+    background-color: #ff715b; }

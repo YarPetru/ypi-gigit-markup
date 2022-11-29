@@ -48,6 +48,7 @@
       width: 100%;
       height: 100%;
       max-height: 100vh;
+      border-radius: 0px;
 
       position: fixed;
     }
@@ -207,5 +208,44 @@
     &:active {
       transform: translateY(1px);
     }
+  }
+}
+
+//  ---- CUSTOM checkbox
+
+.checkbox-custom {
+  position: relative;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  border: 1px solid $color-grey-light-1;
+  color: $color-white;
+
+  transition: all 100ms;
+
+  &__icon-check {
+    position: absolute;
+    @include position-centered;
+
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+  }
+}
+.basic-checkbox {
+  display: none;
+
+  &__label {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+
+    cursor: pointer;
+  }
+
+  &:checked ~ .basic-checkbox__label .checkbox-custom {
+    border-color: $color-accent-red;
+    background-color: $color-accent-red;
   }
 }
