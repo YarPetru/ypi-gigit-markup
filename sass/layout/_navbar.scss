@@ -7,13 +7,13 @@
   position: relative;
 
   &__box {
+    position: absolute;
     height: 100vh;
+    top: 3.2rem;
+    left: 2rem;
   }
 
   &__list {
-    position: fixed;
-    top: 3.2rem;
-    left: 2rem;
     list-style: none;
     height: 95%;
 
