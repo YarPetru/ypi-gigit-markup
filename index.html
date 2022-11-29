@@ -342,9 +342,9 @@
           </p>
         </section>
       </main>
-      <!-- <footer class="footer">FOOTER</footer> -->
 
-      <div class="favebar">
+      <!-- FAVE -->
+      <div class="favebar" id="fave-bar">
         <div class="favebar__content">
           <header class="favebar__header">
             <h2 class="heading-2">Favorite Artists</h2>
@@ -426,7 +426,13 @@
           </ul>
         </div>
       </div>
-      <!-- ADD BUTTON "TO THE BEGIN" -->
+
+      <a href="#fave-bar" class="btn fave__btn">
+        <svg class="btn-close__icon">
+          <use xlink:href="./img/sprite.svg#Favorites-Hover"></use>
+        </svg>
+      </a>
+      <!-- --- -->
     </div>
 
     <!-- MODAL -->
@@ -585,6 +591,7 @@
         </a>
       </div>
     </div>
+
     <!-- <input type="checkbox" class="fave__checkbox" id="fave-btn" />
     <label for="fave-btn" class="fave__btn">
       <span class="navigation__icon">FAVE</span>
