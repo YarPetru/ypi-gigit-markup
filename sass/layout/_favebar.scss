@@ -52,7 +52,6 @@
     list-style: none;
 
     display: grid;
-    // grid-template-columns: max-content max-content;
     grid-template-rows: repeat(auto-fit);
     gap: 2.4rem;
   }
@@ -128,7 +127,6 @@
     top: 3rem;
     right: 4rem;
 
-    // padding: 3rem;
     width: 4.4rem;
     height: 4.4rem;
     border: none;
@@ -146,7 +144,6 @@
 
     @media only screen and (max-width: $bp-medium) {
       visibility: visible;
-      // width: 0;
     }
   }
 }

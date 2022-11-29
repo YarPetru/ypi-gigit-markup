@@ -1,9 +1,4 @@
 .nav {
-  // width: 8rem;
-  // height: 100vh;
-  // position: fixed;
-  // top: 0;
-  // left: 0;
   background-color: $color-black;
   grid-row: 1 / -1;
   grid-column: 1 / 2;
@@ -20,19 +15,16 @@
     top: 3.2rem;
     left: 2rem;
     list-style: none;
-    // height: 60rem;
     height: 95%;
 
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    gap: 2.4rem; // ПРОВЕРИТЬ GAP
+    gap: 2.4rem;
   }
 
   &__item {
-    // width: 4rem;
-    // height: 4rem;
     position: relative;
 
     &:first-child {
@@ -95,24 +87,6 @@
     justify-content: center;
 
     transition: $basic-transition;
-
-    // position: relative;
-
-    // &::before {
-    //   content: "";
-    //   display: inline-block;
-    //   width: 100%;
-    //   height: 100%;
-    //   border-radius: $border-radius-circle;
-    //   background-color: $color-black;
-
-    //   position: absolute;
-    //   top: 0;
-    //   left: 0;
-    //   z-index: -100;
-
-    //   transition: all 200ms ease;
-    // }
   }
 
   &__link:hover &::before {
@@ -123,7 +97,6 @@
   &__link:hover {
     background-color: $color-accent-green;
     border-color: $color-accent-green;
-    // color: $color-black;
   }
 
   &__link:hover &__logo {

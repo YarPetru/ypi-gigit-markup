@@ -8,7 +8,6 @@
 
   @media only screen and (max-width: $bp-medium) {
     grid-template-columns: [navbar-start] 8rem [navbar-end main-start] 1fr [main-end];
-    // grid-auto-columns: 0;
     grid-template-rows:
       [header-start] min-content [header-end
       main-start] min-content [main-end

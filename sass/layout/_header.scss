@@ -75,10 +75,6 @@
 
     transition: $basic-transition;
 
-    // @media only screen and (max-width: $bp-small) {
-    //   padding: 0.8rem 1.2rem;
-    // }
-
     &::placeholder {
       color: $color-grey-2;
       transition: all 500ms;
@@ -92,16 +88,9 @@
     &:focus::placeholder {
       opacity: 0;
       visibility: hidden;
-      // color: transparent;
       transform: translateY(-3rem);
     }
   }
-
-  // &__input:placeholder-shown + &__label {
-  //   opacity: 0;
-  //   visibility: hidden; //element go away from page, but visibility is not animated. so Opacity
-  //   transform: translateY(-4rem);
-  // }
 
   &__button {
     position: absolute;
@@ -118,8 +107,6 @@
   }
 
   &__button:hover &__icon {
-    // width: 2.8rem;
-    // height: 2.8rem;
     transform: translateY(-1px);
   }
 
