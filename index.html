@@ -16,7 +16,24 @@
   <body>
     <div class="container">
       <nav class="nav">
-        <div class="nav__box">
+        <div class="nav__mobile-menu">
+          <a href="#" class="nav__mobile-menu--left">
+            <img
+              src="./img/nav-logo-mobile.png"
+              alt="Menu Logo GigIt"
+              class="nav__mobile-menu__logo"
+            />
+          </a>
+          <a href="#nav__box" class="nav__mobile-menu--right heading-3"
+            >Go to</a
+          >
+        </div>
+        <div class="nav__box" id="nav__box">
+          <a href="#" class="nav__btn">
+            <svg class="btn-close__icon">
+              <use xlink:href="./img/sprite.svg#Close"></use>
+            </svg>
+          </a>
           <ul class="nav__list">
             <li class="nav__item">
               <a href="#" class="nav__link">
@@ -129,16 +146,19 @@
           <div class="hero__img-box">
             <img
               class="hero__img hero__img--1"
+              srcset="./img/hero/hero-1.jpg 1x, ./img/hero/hero-1@2x.jpg 2x"
               src="./img/hero/hero-1@2x.jpg"
               alt="Music band"
             />
             <img
               class="hero__img hero__img--2"
+              srcset="./img/hero/hero-2.jpg 1x, ./img/hero/hero-2@2x.jpg 2x"
               src="./img/hero/hero-2@2x.jpg"
               alt="Music band"
             />
             <img
               class="hero__img hero__img--3"
+              srcset="./img/hero/hero-3.jpg 1x, ./img/hero/hero-3@2x.jpg 2x"
               src="./img/hero/hero-3@2x.jpg"
               alt="Music band"
             />
@@ -234,6 +254,10 @@
           <ul class="popular__list">
             <li class="popular__item">
               <img
+                srcset="
+                  ./img/popular/popular-1.jpg    1x,
+                  ./img/popular/popular-1@2x.jpg 2x
+                "
                 src="./img/popular/popular-1@2x.jpg"
                 alt="Band photo"
                 class="popular__img margin-bottom--16"
@@ -248,6 +272,10 @@
             </li>
             <li class="popular__item">
               <img
+                srcset="
+                  ./img/popular/popular-2.jpg    1x,
+                  ./img/popular/popular-2@2x.jpg 2x
+                "
                 src="./img/popular/popular-2@2x.jpg"
                 alt="Band photo"
                 class="popular__img margin-bottom--16"
@@ -257,6 +285,10 @@
             </li>
             <li class="popular__item">
               <img
+                srcset="
+                  ./img/popular/popular-3.jpg    1x,
+                  ./img/popular/popular-3@2x.jpg 2x
+                "
                 src="./img/popular/popular-3@2x.jpg"
                 alt="Band photo"
                 class="popular__img margin-bottom--16"
@@ -271,6 +303,10 @@
             </li>
             <li class="popular__item">
               <img
+                srcset="
+                  ./img/popular/popular-4.jpg    1x,
+                  ./img/popular/popular-4@2x.jpg 2x
+                "
                 src="./img/popular/popular-4@2x.jpg"
                 alt="Band photo"
                 class="popular__img margin-bottom--16"
@@ -285,6 +321,10 @@
           <ul class="recommended__list">
             <li class="recommended__item">
               <img
+                srcset="
+                  ./img/recommended/recommended-2.jpg    1x,
+                  ./img/recommended/recommended-2@2x.jpg 2x
+                "
                 src="./img/recommended/recommended-2@2x.jpg"
                 alt="Mucis band"
                 class="recommended__img margin-bottom--12"
@@ -294,6 +334,10 @@
             </li>
             <li class="recommended__item">
               <img
+                srcset="
+                  ./img/recommended/recommended-4.jpg    1x,
+                  ./img/recommended/recommended-4@2x.jpg 2x
+                "
                 src="./img/recommended/recommended-4@2x.jpg"
                 alt="Mucis band"
                 class="recommended__img margin-bottom--12"
@@ -303,6 +347,10 @@
             </li>
             <li class="recommended__item">
               <img
+                srcset="
+                  ./img/recommended/recommended-5.jpg    1x,
+                  ./img/recommended/recommended-5@2x.jpg 2x
+                "
                 src="./img/recommended/recommended-5@2x.jpg"
                 alt="Mucis band"
                 class="recommended__img margin-bottom--12"
@@ -312,6 +360,10 @@
             </li>
             <li class="recommended__item margin-bottom--12">
               <img
+                srcset="
+                  ./img/recommended/recommended-6.jpg    1x,
+                  ./img/recommended/recommended-6@2x.jpg 2x
+                "
                 src="./img/recommended/recommended-6@2x.jpg"
                 alt="Mucis band"
                 class="recommended__img v"
@@ -321,6 +373,10 @@
             </li>
             <li class="recommended__item">
               <img
+                srcset="
+                  ./img/recommended/recommended-3.jpg    1x,
+                  ./img/recommended/recommended-3@2x.jpg 2x
+                "
                 src="./img/recommended/recommended-3@2x.jpg"
                 alt="Mucis band"
                 class="recommended__img margin-bottom--12"
@@ -423,7 +479,7 @@
       </div>
 
       <a href="#fave-bar" class="btn fave__btn">
-        <svg class="btn-close__icon">
+        <svg class="fave__icon">
           <use xlink:href="./img/sprite.svg#Favorites-Hover"></use>
         </svg>
       </a>
@@ -431,13 +487,20 @@
     </div>
 
     <!-- MODAL -->
-    <div class="pop-up" id="pop-up">
+    <div class="pop-up">
+      <a href="#" id="pop-up" class="pop-up__backdrop"></a>
       <div class="pop-up__content">
         <h2 class="heading-1 margin-bottom--36">Filters</h2>
         <form action="#">
           <div class="pop-up__filters">
             <!-- Filter - 1 -->
             <div class="pop-up__filter">
+              <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+              <input
+                type="checkbox"
+                class="pop-up__main-checkbox"
+                id="filter-toggle--size"
+              />
               <label for="filter-toggle--size" class="pop-up__main-label">
                 <p
                   class="pop-up__filter-heading pop-up__filter-heading--filtered"
@@ -457,19 +520,10 @@
                   </svg>
                 </div>
               </label>
-              <input
-                type="checkbox"
-                class="pop-up__main-checkbox"
-                id="filter-toggle--size"
-              />
+
               <ul class="pop-up__filter-list pop-up__filter-list--size">
                 <li class="pop-up__filter-item">
-                  <input
-                    class="basic-checkbox"
-                    type="checkbox"
-                    id="3-6"
-                    checked
-                  />
+                  <input class="basic-checkbox" type="checkbox" id="3-6" />
                   <label class="basic-checkbox__label" for="3-6">
                     <span class="checkbox-custom">
                       <svg class="checkbox-custom__icon-check">

@@ -122,9 +122,10 @@
 // ______FOR HIDING PANEL
 
 .fave {
-  &__btn {
+  &__btn:link,
+  &__btn:visited {
     position: fixed;
-    top: 3rem;
+    top: 12.6rem;
     right: 4rem;
 
     width: 4.4rem;
@@ -142,8 +143,22 @@
 
     cursor: pointer;
 
+    transition: $basic-transition;
+
     @media only screen and (max-width: $bp-medium) {
       visibility: visible;
     }
+  }
+
+  &__btn:hover,
+  &__btn:focus {
+    transform: scale(1.2);
+    box-shadow: 0rem 1rem 3rem rgba($color-black, 0.25);
+  }
+
+  &__icon {
+    @include basic-icon;
+    width: 4rem;
+    height: 4rem;
   }
 }

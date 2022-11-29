@@ -9,12 +9,21 @@
   grid-template-columns: [navbar-start] 8rem [navbar-end main-start] 1fr [main-end favebar-start] 34.4rem [favebar-end];
 
   @media only screen and (max-width: $bp-medium) {
-    grid-template-columns: [navbar-start] 8rem [navbar-end main-start] 1fr [main-end];
+    grid-template-columns: [main-start] 1fr [main-end];
     grid-template-rows:
-      [header-start] min-content [header-end
+      [nav-start] min-content [nav-end
+      header-start] min-content [header-end
       main-start] min-content [main-end
       fave-start] min-content [fave-end];
   }
+
+  // @media only screen and (max-width: $bp-medium) {
+  //   grid-template-columns: [navbar-start] 8rem [navbar-end main-start] 1fr [main-end];
+  //   grid-template-rows:
+  //     [header-start] min-content [header-end
+  //     main-start] min-content [main-end
+  //     fave-start] min-content [fave-end];
+  // }
 }
 
 .main-content {

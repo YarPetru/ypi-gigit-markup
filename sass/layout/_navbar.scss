@@ -1,16 +1,64 @@
 .nav {
   background-color: $color-black;
   grid-row: 1 / -1;
+
   grid-column: 1 / 2;
   padding: 3.2rem 2rem;
 
   position: relative;
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-row: nav-start / nav-end;
+    padding: 2.8rem 4.4rem;
+  }
 
   &__box {
     position: absolute;
     height: 100vh;
     top: 3.2rem;
     left: 2rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      display: none;
+
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100%;
+      background-color: $color-black;
+      z-index: 1000;
+      padding: 9.6rem 4.4rem 4.4rem 4.4rem;
+
+      &:target {
+        display: block;
+      }
+    }
+  }
+
+  &__mobile-menu {
+    display: none;
+
+    @media only screen and (max-width: $bp-medium) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &--right {
+      color: $color-grey-light-2;
+      font-weight: 600;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    &--left {
+      height: 4rem;
+    }
+  }
+
+  &__mobile-menu__logo {
+    height: 100%;
   }
 
   &__list {
@@ -22,6 +70,15 @@
     align-items: center;
 
     gap: 2.4rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-items: center;
+      align-items: center;
+      row-gap: 4.8rem;
+      column-gap: 2rem;
+    }
   }
 
   &__item {
@@ -31,37 +88,57 @@
       margin-bottom: 24px;
       position: relative;
 
-      @media only screen and (max-width: $bp-small) {
-        margin-top: 24px;
-        margin-bottom: 40px;
+      @media only screen and (max-width: $bp-medium) {
+        margin: 0;
       }
 
       &::after {
         @include nav-pseudo;
         bottom: -24px;
 
-        @media only screen and (max-width: $bp-small) {
-          bottom: -45px;
+        @media only screen and (max-width: $bp-medium) {
+          display: none;
         }
       }
     }
 
     &:nth-child(7) {
       margin-top: auto;
+      @media only screen and (max-width: $bp-medium) {
+        margin: 0;
+      }
     }
 
     &:nth-child(8) {
       margin-bottom: 24px;
+      @media only screen and (max-width: $bp-medium) {
+        margin: 0;
+        grid-row: 1;
+        grid-column: 2;
+      }
     }
 
     &:last-child {
       position: relative;
 
+      @media only screen and (max-width: $bp-medium) {
+        grid-row: 1;
+        grid-column: 3;
+      }
+
       &::after {
         @include nav-pseudo;
         top: -24px;
+
+        @media only screen and (max-width: $bp-medium) {
+          display: none;
+        }
       }
     }
+
+    // @media only screen and (max-width: $bp-medium) {
+    //   margin: 0;
+    // }
   }
 
   &__item--active &__link:link,
@@ -87,6 +164,11 @@
     justify-content: center;
 
     transition: $basic-transition;
+
+    @media only screen and (max-width: $bp-medium) {
+      width: 6.4rem;
+      height: 6.4rem;
+    }
   }
 
   &__link:hover &::before {
@@ -112,14 +194,31 @@
     border-color: $color-green;
   }
 
+  &__link:focus {
+    @media only screen and (max-width: $bp-medium) {
+      outline: none;
+      transform: scale(1.2);
+    }
+  }
+
   &__logo {
     width: 4rem;
     height: 4rem;
     transition: $basic-transition;
+
+    @media only screen and (max-width: $bp-medium) {
+      width: 6.4rem;
+      height: 6.4rem;
+    }
   }
 
   &__icon {
     @include basic-icon;
+
+    @media only screen and (max-width: $bp-medium) {
+      width: 3.2rem;
+      height: 3.2rem;
+    }
   }
 
   &__item--active &__link:link,
@@ -130,6 +229,24 @@
 
   &__item--active &__icon {
     fill: $color-black;
+  }
+
+  &__btn {
+    position: absolute;
+    top: 4.4rem;
+    right: 4.4rem;
+    color: $color-accent-green;
+
+    transition: $basic-transition;
+
+    &:hover {
+      color: $color-green;
+    }
+
+    &:focus {
+      outline: none;
+      transform: scale(1.2);
+    }
   }
 
   // NOTIFICATION
