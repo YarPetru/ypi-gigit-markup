@@ -231,21 +231,27 @@
     fill: $color-black;
   }
 
-  &__btn {
-    position: absolute;
-    top: 4.4rem;
-    right: 4.4rem;
-    color: $color-accent-green;
+  &__btn-close {
+    display: none;
 
-    transition: $basic-transition;
+    @media only screen and (max-width: $bp-medium) {
+      display: block;
 
-    &:hover {
-      color: $color-green;
-    }
+      position: absolute;
+      top: 4.4rem;
+      right: 4.4rem;
+      color: $color-accent-green;
 
-    &:focus {
-      outline: none;
-      transform: scale(1.2);
+      transition: $basic-transition;
+
+      &:hover {
+        color: $color-green;
+      }
+
+      &:focus {
+        outline: none;
+        transform: scale(1.2);
+      }
     }
   }
 
